@@ -1,8 +1,10 @@
 # Variáveis 
 
-name = "Beau" ; print("Meu nome é Marcos!")
+def variaveis():
 
-#   print("Indentação")
+    name = "Beau" ; print("Meu nome é Marcos!")
+
+    print("Indentação")
 
 # Indica o escopo de um bloco de código.
 
@@ -104,13 +106,74 @@ def operadores_aritmericos():
 
 # Operadores de comparação 
 def operadores_comparacao():
-    ... 
+
+    a = 1 
+    b = 2 
+
+    a == b # Igual
+    a != b # Não igual  
     
+    a > b # Maior que 
+    a >= b # Maior ou igual 
+
+    a < b # Maior que 
+    a <= b # Menor ou que
+    
+
+
+def operadores_logicos():
+
+    def parte_1():
+        condicao_1 = True
+        condicao_2 = False 
+
+        print(not condicao_1) 
+
+        print("\nFalse", condicao_1 and condicao_2)
+        print("\nTrue", condicao_1 and not condicao_2)
+
+        print("\nTrue", condicao_1 or condicao_2)
+        print("\nFalse", not condicao_1 or condicao_2)
+
+
+    def parte_2()->None:
+
+        """
+            Um fato interessante dos operadores lógicos 
+        """
+
+        print(0 or 1) # 1 Retorna a primeira proposição, não sendo esta falsa.
+        print(1 or 0) # 1 
+        print(1 or 2) # 1 
+
+        print([] or False) # Caso as duas proposições sejam falsas a última é retornada. 
+    
+
+        
+    def parte_3()->None:
+
+
+        print(0 and 1) ## 0, Retorna o segundo argumento somente quando o primeiro é verdadeiro
+        print(1 and 0) ## 0 
+
+        print(False and 'hey')  # False, retorna o segundo argumento apenas quando o primeiro é verdadeiro caso 
+                                # Caso contrário sempre retorna o primeiro. 
+
+        print([] and True) # []
+
+        print(True and False)
+
+    parte_3()
+
+
+def operadores_bitwise():
+    ... 
+
 def main():
 
     # verificar_str()
     # verificar_int()
-    operadores_aritmericos()
+    operadores_logicos()
 
 
 if __name__ == '__main__':
