@@ -169,6 +169,17 @@ def operadores_logicos():
 def operadores_bitwise():
     ... 
 
+def operadores_identidade():
+
+    # is 
+    # in 
+
+    # is verifica se dois objetos são iguais 
+    # in verifica se um objeto está contido em uma sequência/estrutura de dados. 
+
+    ... 
+
+
 def main():
 
     # verificar_str()
