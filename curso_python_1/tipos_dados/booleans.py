@@ -1,6 +1,6 @@
 # Valores booleanos 
 
-
+from typing import List
 
 
 def exemplo_1()-> None:
@@ -23,6 +23,7 @@ def exemplo_1()-> None:
 
 def exemplo_2()-> None:
 
+    feito = True
     if feito:
         print("O serviço foi realizado com sucesso!")
 
@@ -57,7 +58,7 @@ def exemplo_3()-> None:
 
     # As estruturas de dados vazias (listas, tuplas, dicionários e etc) são sempre avaliadas como falsas.  
     
-    valor_2 = []
+    valor_2: List[int] = []
 
     print("\nTerceira condição: \n")
     if not valor_2:
