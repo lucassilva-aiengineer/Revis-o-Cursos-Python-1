@@ -180,11 +180,22 @@ def operadores_identidade():
     ... 
 
 
+
+def entrada_usuario()-> None:
+
+    """Recebendo entradas do usuário. A função input recebe erntradas em tempo 
+    de execução. """
+
+    idade = input("Indique a sua idade: ")
+    print(" A sua idade é: " + idade)
+
+
 def main():
 
     # verificar_str()
     # verificar_int()
-    operadores_logicos()
+    # operadores_logicos()
+    entrada_usuario()
 
 
 if __name__ == '__main__':
