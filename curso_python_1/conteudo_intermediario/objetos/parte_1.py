@@ -8,7 +8,7 @@ def objetos_numéricos():
     # listas 
     print(idade.real)
     print(idade.imag)
-    print(idade.bit_length())
+    print(idade.bit_length()) # A quantidade bits para representar aquele valor de forma binária
 
 
 def objeto_lista():
