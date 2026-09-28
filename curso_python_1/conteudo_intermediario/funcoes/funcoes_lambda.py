@@ -55,6 +55,9 @@ def funcao_filter():
 
     numeros_pares = filter(par, lista_numeros) 
 
+    numeros_pares_a = filter(lambda numero: numero % 2 == 0, lista_numeros)
+    print("Filtrando com a função lambda: " + str(list(numeros_pares_a)))
+
     # Tentando construir a minha própria função filter
     
     def meu_filter(funcao, elementos: List[int])-> List[int]:
@@ -97,15 +100,41 @@ def funcao_filter():
     # funcao_filter()
     # testando_conceito()
 
-    elementos = [10, 12, 15, 14, 16, 20]
-    resultado = meu_filter(par, elementos)
+    # elementos = [10, 12, 15, 14, 16, 20]
+    # resultado = meu_filter(par, elementos)
 
-    print(resultado)
+    # print(resultado)
+
+    print(list(numeros_pares))
+
+
+def funcao_reduce():
+    
+    from functools import reduce 
+
+    folha_pagamento = [
+        ("Pedro", 2000),
+        ("Marcos", 4000),
+        ("José", 2000),
+        ("Mateus", 10000) 
+    ]
+
+    gasto_total = sum([tupla[1] for tupla in folha_pagamento])
+
+    print("Folha de pagamento: " + str(gasto_total))
+
+    # Utilizando reduce
+    # A função reduce, percorre um iterável em duplas 
+
+    folha_total = reduce(lambda a, b: a + b[1], folha_pagamento, 0) 
+    print("Resultado: ", folha_total)
+
 
 def main():
     # intr()
-    funcao_filter()
+    # funcao_filter()
 
+    funcao_reduce()
 
 
 
