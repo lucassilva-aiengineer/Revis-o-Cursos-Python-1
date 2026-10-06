@@ -127,6 +127,7 @@ def dicionario_4():
     print(copia_2)
 
 
+
 def dicionario_5():
 
     meu_dicionario = {"nome": "Marcos", "idade": 20, "email": "marcos@gmail.com"}
@@ -137,6 +138,20 @@ def dicionario_5():
     print(meu_dicionario)
 
 
+    # Nós podemos ter chaves imutáveis. 
+
+    dicionario = {3: 9, 6:36, 9:81}
+    print(dicionario)
+
+    elemento = dicionario[0]
+    print(elemento)
+
+
+    minha_tupla = (8, 7) # 
+
+    dicionario_4 = {minha_tupla: 10}
+    print(dicionario_4)
+    
 def main():
     # dicionario_p1()
     # dicionario_p2()
