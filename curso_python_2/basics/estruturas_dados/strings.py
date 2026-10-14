@@ -97,11 +97,35 @@ def strings_3():
 
 def string_4():
 
-    # Formatação de string 
-    nome = "Lucas"
-    frase = "O meu nome é %s" % nome
+    def formato_antigo():
+        # Formatação de string 
+        nome = "Lucas"
+        idade = 12.5
+        frase = "O meu nome é %s" % nome # Bem com a linguagem
+        frase_com_numero = "O meu nome é Lucas e a minha idade é %d anos" % idade
+        frase_com_decimal = "O meu nome é Lucas e a minha idade é %f anos" % idade
 
-    print(frase)
+        # print(frase)
+        # print(frase_com_numero)
+        print(frase_com_decimal)
+
+    def formato_2():
+        idade = 21.954030
+
+        frase = "A minha idade é {:.2f} a idade dos meus amigos é {}".format(idade, idade)
+        print(frase)
+
+
+    def formato_3():
+
+        idade = 21.954030
+
+        frase = f"A minha idade é {idade:.2f} a idade dos meus amigos é {idade}"
+        print(frase)
+
+        
+    # formato_2()
+    formato_3()
 
 def outras_coisas()-> None:
     from timeit import default_timer as timer 
