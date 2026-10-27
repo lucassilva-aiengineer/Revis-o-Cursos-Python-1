@@ -1,0 +1,10 @@
+{
+    "nome": "Lucas",
+    "idade": 22,
+    "cidade": "An\u00e1polis",
+    "possuiFilhos": true,
+    "formacao": [
+        "Engenharia Civil",
+        "Direito"
+    ]
+}
