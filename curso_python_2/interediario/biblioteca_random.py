@@ -39,3 +39,14 @@ print(letras)
 
 random.shuffle(letras)
 print(letras)
+
+
+# Mantendo os valores 
+import random 
+
+random.seed(1)
+
+print(random.random())
+print(random.randint(0, 10))
+
+print(random.randint(0, 10))
