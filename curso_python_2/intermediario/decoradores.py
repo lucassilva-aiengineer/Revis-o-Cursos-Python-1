@@ -92,9 +92,59 @@ def decoradores_parte_3():
 
     great("Lucas")
 
+
+def classe_decoradores():
+
+    class CountCall:
+
+        """
+            Criando decoradores de classe 
+        """
+
+        def __init__(self, func):
+            self.func = func
+            self.num_calls = 0 
+
+        # O método mágico call permite que objeto seja executado 
+        # como um método, no caso um método que executa aquilo que está no escopo 
+        # do método call quando invocamos o objeto
+
+        # def __call__(self, *args, **kwargs):
+        #     print("Olá User!") 
+
+
+        def __call__(self, *args, **kwargs):
+            print("Executando objeto como função...")
+            time.sleep(0.2)
+
+            self.num_calls += 1 
+            # print("Esta função foi executada {}".format(self._num_calls))
+            print(f"Esta função foi executada {self.num_calls}")
+
+            return self.func(*args, **kwargs)
+
+    # from faker import Faker
+
+    # faker = Faker('en_US')
+    # faker = Faker('pt_BR')
+
+    def funcao(nome: str):
+        print(f"Olá, {nome}!")
+
+    contagem_chamadas = CountCall(funcao)
+    contagem_chamadas("Lucas")
+    contagem_chamadas("João")
+
+    for a in range(5):
+        contagem_chamadas("João")
+
+
+
 def main():
     # decoradores_com_argumentos()
-    decoradores_parte_3()
+    # decoradores_parte_3()
+
+    classe_decoradores()
 
 if __name__ == '__main__':
     main()
