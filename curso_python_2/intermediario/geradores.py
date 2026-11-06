@@ -92,8 +92,8 @@ def geradores_parte_1():
 
         # Verificando a econômia de memória 
 
-        print(sys.getsizeof(exemplo_1(1000)))
-        print(sys.getsizeof(exemplo_1_geradores(1000)))
+            print(sys.getsizeof(exemplo_1(1000)))
+            print(sys.getsizeof(exemplo_1_geradores(1000)))
 
 
         def exemplo_2(limite):
@@ -109,15 +109,28 @@ def geradores_parte_1():
                 a, b = b, a + b 
 
         
-        fib = exemplo_2(30)
-        for a in fib: 
-            print(fib)
+            fib = exemplo_2(30)
+            for a in fib: 
+                print(fib)
+
+        
+        def exemplo_3():
+            import sys 
 
 
+            alvo = 10000
+            meu_gerador_1 = (i for i in range(alvo) if i % 2 == 0)
+            print(sys.getsizeof(meu_gerador_1))
+
+            meu_gerador_2 = [i for i in range(alvo) if i  % 2 == 0]
+            print(sys.getsizeof(meu_gerador_2))
+
+
+        exemplo_3()
 
 
     exemplos()
-
+    
 
 
 
